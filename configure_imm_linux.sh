@@ -79,6 +79,9 @@ if [ "$CHANGE_PASSWD" = "y" ]; then
 	$TMP_DIR/asu64 set IMM.password.1 "$PASSWD"
 fi
 
+echo "Desactivando Telnet..."
+$TMP_DIR/asu64 set IMM.TelnetSessions disable --kcs
+
 echo ""
 $TMP_DIR/asu64 rebootimm --kcs
 
